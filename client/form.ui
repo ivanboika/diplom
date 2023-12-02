@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Widget</class>
+ <widget class="QWidget" name="Widget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Widget</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QFrame {
+        background-color: #4A90E2;&quot;
+        border: 2px solid #4A90E2;&quot;
+    }</string>
+  </property>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>50</y>
+     <width>531</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <item row="0" column="0" colspan="2">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="leftMargin">
+       <number>5</number>
+      </property>
+      <property name="topMargin">
+       <number>5</number>
+      </property>
+      <property name="rightMargin">
+       <number>5</number>
+      </property>
+      <property name="bottomMargin">
+       <number>5</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="record">
+        <property name="styleSheet">
+         <string notr="true">    QPushButton {
+        background-color: #4A90E2;
+        border: 2px solid #4A90E2;
+        color: #FFFFFF;
+        border-radius: 5px;
+    }
+    QPushButton:hover {
+        background-color: #357ABD;
+        border: 2px solid #357ABD;
+    }
+    QPushButton:pressed {
+       background-color: #27679F;
+       border: 2px solid #27679F;
+    }</string>
+        </property>
+        <property name="text">
+         <string>Record</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cancel">
+        <property name="styleSheet">
+         <string notr="true">    QPushButton {
+        background-color: #4A90E2;
+        border: 2px solid #4A90E2;
+        color: #FFFFFF;
+        border-radius: 5px;
+    }
+    QPushButton:hover {
+        background-color: #357ABD;
+        border: 2px solid #357ABD;
+    }
+    QPushButton:pressed {
+       background-color: #27679F;
+       border: 2px solid #27679F;
+    }</string>
+        </property>
+        <property name="text">
+         <string>To text</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QTextEdit" name="textEdit">
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #4A90E2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QTextEdit:hover {
+    border: 1px solid #357ABD;
+}
+
+QTextEdit:focus {
+    border: 1px solid #0078D4;
+    background-color: #E5F6FE;
+}</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="Line" name="line">
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>3</number>
+      </property>
+      <property name="midLineWidth">
+       <number>3</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="5" column="0" colspan="2">
+     <widget class="QPushButton" name="pushButton">
+      <property name="styleSheet">
+       <string notr="true">    QPushButton {
+        background-color: #4A90E2;
+        border: 2px solid #4A90E2;
+        color: #FFFFFF;
+        border-radius: 5px;
+    }
+    QPushButton:hover {
+        background-color: #357ABD;
+        border: 2px solid #357ABD;
+    }
+    QPushButton:pressed {
+       background-color: #27679F;
+       border: 2px solid #27679F;
+    }</string>
+      </property>
+      <property name="text">
+       <string>Play</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="styleSheet">
+       <string notr="true">    QPushButton {
+        background-color: #4A90E2;
+        border: 2px solid #4A90E2;
+        color: #FFFFFF;
+        border-radius: 5px;
+    }
+    QPushButton:hover {
+        background-color: #357ABD;
+        border: 2px solid #357ABD;
+    }
+    QPushButton:pressed {
+       background-color: #27679F;
+       border: 2px solid #27679F;
+    }</string>
+      </property>
+      <property name="text">
+       <string>Last Record</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="Line" name="line_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0">
+     <widget class="Line" name="line_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="1">
+     <widget class="QTextEdit" name="textEdit_2">
+      <property name="styleSheet">
+       <string notr="true">QTextEdit {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #4A90E2;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+QTextEdit:hover {
+    border: 1px solid #357ABD;
+}
+
+QTextEdit:focus {
+    border: 1px solid #0078D4;
+    background-color: #E5F6FE;
+}</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

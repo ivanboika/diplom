@@ -1,0 +1,7 @@
+pyside6
+pyaudio
+requests
+keyboard
+torch
+scipy
+noisereduce

@@ -1,0 +1,37 @@
+FROM python:3.9-slim
+
+# Установка git
+RUN apt-get update && apt-get install -y git
+
+RUN pip install torch==2.0.1+cpu torchvision==0.15.2+cpu -f https://download.pytorch.org/whl/torch_stable.html 
+
+# Создание директории для установки файлов из git
+WORKDIR /app/translate/model
+
+RUN build_deps="curl" && \
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends ${build_deps} ca-certificates && \
+    curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git-lfs && \
+    git lfs install && \
+    DEBIAN_FRONTEND=noninteractive apt-get purge -y --auto-remove ${build_deps} && \
+    rm -r /var/lib/apt/lists/*
+
+# Клонирование репозитория
+RUN git lfs install
+
+RUN git clone https://huggingface.co/facebook/wmt19-ru-en
+
+WORKDIR /app/translate/model/wmt19-ru-en/
+RUN git lfs pull
+
+# Возвращение в основную директорию приложения
+WORKDIR /app
+
+# Установка зависимостей
+COPY server/translate/trans_req.txt .
+RUN pip install --no-cache-dir -r trans_req.txt
+
+COPY /server/translate/app_facebook_translate.py .
+
+CMD ["uvicorn", "app_facebook_translate:app", "--host", "0.0.0.0", "--port", "8001"]

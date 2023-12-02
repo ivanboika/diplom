@@ -1,0 +1,11 @@
+vosk~=0.3.45
+python-multipart
+fastapi~=0.103.0
+uvicorn==0.15.0
+transformers~=4.35.0
+sacremoses
+noisereduce
+scipy
+torch
+torchvision
+torchaudio
