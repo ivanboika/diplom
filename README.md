@@ -27,3 +27,6 @@ otherwise something wrong happened
 1. The current STT model as I metioned can't recognize speech so good that I've wanted before. Probably I should try another model(like Whisper)
 2. Punctuation (I've heard that Whisper takes into account punctuation)
 3. Sizes of model and time to deploy server (There is no need to explain, it takes too much time and therefore it slows development and testing)
+
+# Suggetions
+1. Move core docker file(wsl disk image) to the another system disk. Otherwise this can eat all your memory
