@@ -1,14 +1,12 @@
 version: "3.8"
 
 services:
-  vosk:
+  stt:
     build:
       context: .
-      dockerfile: /server/stt/Dockerfile_vosk
+      dockerfile: /server/stt/Dockerfile_stt
     ports:
       - "8000:8000"
-    volumes:
-      - /data
 
   translate:
     build:

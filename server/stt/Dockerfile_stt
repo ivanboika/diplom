@@ -1,0 +1,11 @@
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Установка зависимостей
+COPY server/stt/stt_req.txt .
+RUN pip install --no-cache-dir -r stt_req.txt
+
+COPY server/stt/app_stt.py .
+
+CMD ["uvicorn", "app_stt:app", "--host", "0.0.0.0", "--port", "8000"]

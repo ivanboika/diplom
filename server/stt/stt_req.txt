@@ -1,0 +1,4 @@
+python-multipart
+fastapi~=0.103.0
+uvicorn==0.15.0
+SpeechRecognition
